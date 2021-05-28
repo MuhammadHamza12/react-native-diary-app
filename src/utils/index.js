@@ -1,26 +1,30 @@
 import image1 from '../assets/images/human.png';
-import image2 from './assets/images/manhappy.png';
-import image3 from './assets/images/manpen.png';
-import image4 from './assets/images/manwithpen.png';
+import image2 from '../assets/images/manhappy.png';
+import image4 from '../assets/images/manwithpen.png';
 
 export const tourData = [
     {
       titleText: 'Welcome',
-      subtitle: 'Hey! Did you use papers for memorizing things ? Did you use papers for memorizing things , Did you use papers for memorizing things',
+      subtitle: `This apps helps you to write your goals on daily basis, you know writing things will reflect in our behaviour , routine and so, yeah what you are waiting for join this platform now.`,
       imgRelativeURL: image1,
       buttonName: 'Next'
     },
     {
-      titleText: 'Welcome2',
-      subtitle: 'Hey! Did you use papers for memorizing things ? Did you use papers for memorizing things , Did you use papers for memorizing things',
+      titleText: 'Distractions',
+      subtitle: 'Distraction will not let you down this time, we are going to utilize our time and make complete routine.',
       imgRelativeURL: image2,
       buttonName: 'Next'
     },
     {
-      titleText: 'Welcome4',
-      subtitle: 'Hey! Did you use papers for memorizing things ? Did you use papers for memorizing things , Did you use papers for memorizing things',
+      titleText: 'MIT',
+      subtitle: 'Most Important Task, Note down all your MIT and feel productive to work toward them whole day and write your progress too.' , 
       imgRelativeURL: image4,
       buttonName: 'Next'
     },
 
-  ]
+  ];
+
+  export const Screen_Constants = {
+    LOGIN_SCENE : 'LOGIN_SCENE',
+    SIGNUP_SCENE: 'SIGNUP_SCENE',
+  }

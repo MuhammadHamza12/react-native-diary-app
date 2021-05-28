@@ -20,6 +20,15 @@ function dimensions(top, right = top, bottom = top, left = right, property) {
 
     return styles;
 }
+export function centerStyle() {
+    let styles = {};
+
+    styles[`flex`] = 1;
+    styles[`justifyContent`] = 'center';
+    styles[`alignItems`] = 'center';
+
+    return styles;
+}
 
 export function margin(top, right, bottom, left) {
     return dimensions(top, right, bottom, left, 'margin');
