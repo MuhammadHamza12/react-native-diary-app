@@ -3,6 +3,8 @@ import { Swiper } from 'components/organisms'
 import { AuthContext } from 'context';
 import React, { useContext, useRef } from 'react'
 import { View, Text } from 'react-native'
+import LocalService from 'services/LocalService';
+import { Async_Constants } from 'utils';
 
 export default function({tourData}){
     const swipeRef = useRef(null);
@@ -11,11 +13,11 @@ export default function({tourData}){
     const onChangeTourInfo=(index)=>{
         swipeRef.current.scrollBy(1,true)
         if(index==2) onSkipHandler();
-        
     }
-    const onSkipHandler=()=>{
+    const onSkipHandler= async () => {
       let cloneContext = {...authContext.userData};
-      cloneContext['isTourCompleted']=false;
+      await LocalService.storeDataAsStringKeyPairs(Async_Constants.isTourCompleted,'true');
+      cloneContext['isTourCompleted']=true;
       authContext.setUserData(cloneContext);
     }
     return (

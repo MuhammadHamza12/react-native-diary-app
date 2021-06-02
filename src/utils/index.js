@@ -1,6 +1,7 @@
 import image1 from '../assets/images/human.png';
 import image2 from '../assets/images/manhappy.png';
 import image4 from '../assets/images/manwithpen.png';
+import moment from 'moment';
 
 export const tourData = [
     {
@@ -28,3 +29,15 @@ export const tourData = [
     LOGIN_SCENE : 'LOGIN_SCENE',
     SIGNUP_SCENE: 'SIGNUP_SCENE',
   }
+
+  export const Async_Constants = {
+    isTourCompleted : '@is_tour_completed',
+    database_users : '@users',
+    auth_details:'@auth_details',
+    notes_details:'@notes_details'
+  }
+
+  export let datesWhitelist = [{
+    start: moment('01/02/1970').add(6,'week'),
+    end: moment().add(6,'week') 
+  }];

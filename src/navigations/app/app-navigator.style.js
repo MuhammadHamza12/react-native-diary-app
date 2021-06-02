@@ -5,13 +5,17 @@ import { FONT_SIZE_16, FONT_WEIGHT_REGULAR } from "styles/typography";
 const styles = ({fullWidth,position}) => StyleSheet .create({
     midButtonContainer: {      
         position: 'absolute',
-        bottom: 20, // space from bottombar
+        bottom:0,
+        right:5,
+        // bottom: 20, // space from bottombar
         height: 58,
         width: 58,
         borderRadius: 58,
         backgroundColor: Colors.SECONDARY,
         justifyContent: 'center',
         alignItems: 'center',
+        alignSelf:'flex-end',
+        margin: 10
       },
       buttonText: {
         color: Colors.WHITE,

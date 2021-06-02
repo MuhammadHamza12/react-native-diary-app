@@ -12,7 +12,7 @@ export default function AuthNavigator(props) {
                 gestureEnabled: true,
                 cardOverlayEnabled: true,
                 ...TransitionPresets.SlideFromRightIOS,
-            }}
+            }}  
         >
             <Stack.Screen
                 options={{

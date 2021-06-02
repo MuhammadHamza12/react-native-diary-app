@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 export default function GlobalAuthContext(props) {
     const [userData, setUserData] = useState({
-        isAuth: true,
+        isAuth: false,
         user:{},
         isTourCompleted:false,
     });
