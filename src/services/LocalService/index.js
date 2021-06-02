@@ -44,10 +44,12 @@ const getDataAsObject = async (key) => {
     console.log('getting object error',e)
   }
 }
-const removeValue = async () => {
+const removeValue = async (key) => {
   try {
-    await AsyncStorage.removeItem('@MyApp_key')
+    await AsyncStorage.removeItem(key)
+    console.log('remove successfully');
   } catch(e) {
+    console.log('remove in error',e);
     // remove error
   }
 

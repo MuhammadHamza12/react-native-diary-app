@@ -22,30 +22,14 @@ export default function App({sethtml,html}) {
       animated
       style="auto" /> */}
       <QuillEditor 
-       options={[
-        ['bold', 'italic', 'underline'],
-        [{ header: 1 }, { header: 2 }],
-        [{ align: [] }],
-        [
-          { color: ['#000000', '#e60000', '#ff9900', 'yellow'] },
-          { background: [] },
-        ],
-        ['image', 'clock'],
-      ]}
+       
          onHtmlChange={(event)=> notes && notes.selectedNote && Object.keys(notes.selectedNote)?.length > 0 ? onHandleEditSelectData(event.html) : sethtml(event.html)}
          onTextChange={(event)=> console.log(event)}
           style={styles.editor}
           ref={_editor}
           initialHtml={ notes && notes.selectedNote && Object.keys(notes.selectedNote)?.length > 0 ? notes.selectedNote.noteText :  html}
       />
-      <QuillToolbar styles={{
-      toolbar:{
-        backgroundColor:Colors.WHITE,
-        borderColor:Colors.WHITE,
-        borderWidth:0,
-        borderTopColor:Colors.WHITE
-      }
-      }} editor={_editor} options="full" theme="light" />
+      <QuillToolbar editor={_editor} options="full" theme="light" />
     </SafeAreaView>
   );
 }
@@ -58,8 +42,6 @@ const styles = StyleSheet.create({
   },
   root: {
     flex: 1,
-    // marginTop: StatusBar.currentHeight || 0,
-    backgroundColor: '#eaeaea',
   },
   editor: {
     flex: 1,
