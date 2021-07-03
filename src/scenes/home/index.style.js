@@ -1,6 +1,7 @@
 import { StyleSheet } from 'react-native';
 import { Colors } from 'styles';
 import { FONT_SIZE_16, FONT_WEIGHT_REGULAR } from 'styles/typography';
+// commit: for checking
 const styles = (props) => StyleSheet .create({
 
     main:{
